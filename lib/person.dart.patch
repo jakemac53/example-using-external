@@ -1,0 +1,26 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+import 'package:json_annotation/json_annotation.dart';
+
+@patch
+class Person {
+  @patch
+  factory Person.fromJson(Map<String, dynamic> json) {
+    return Person(
+      firstName: json['firstName'] as String,
+      lastName: json['lastName'] as String,
+      dateOfBirth: DateTime.parse(json['dateOfBirth'] as String),
+    );
+  }
+
+  @patch
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'firstName': this.firstName,
+        'lastName': this.lastName,
+        'dateOfBirth': this.dateOfBirth.toIso8601String(),
+      };
+} // Person
